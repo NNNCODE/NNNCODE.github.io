@@ -1,0 +1,18 @@
+{
+ "finished": "2026-11-06T19:03:34.496Z",
+ "voice": "af_heart",
+ "bitrate": 24000,
+ "device": "webgpu",
+ "dtype": "fp32",
+ "kokoro": "kokoro-js 1.2.1, onnx-community/Kokoro-82M-v1.0-ONNX",
+ "thisRun": {
+  "asked": 24808,
+  "written": 24808,
+  "failed": 0,
+  "seconds": 15840
+ },
+ "renderMsMedian": 595,
+ "averageBytes": 2395,
+ "averageSeconds": 0.748,
+ "filesInFolder": 58226
+}
