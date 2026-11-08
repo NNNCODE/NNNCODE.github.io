@@ -27,14 +27,14 @@
 <nav><a href="./">Kenning</a> · Privacy policy</nav>
 
 <h1>Kenning — Privacy Policy</h1>
-<p class="meta">Effective 2026-09-27, revised 2026-11-04. Applies to version 0.7.0 and later of Kenning, which was called Lexi Hover up to version 0.7.0.</p>
+<p class="meta">Effective 2026-09-27, revised 2026-11-06. Applies to version 0.7.0 and later of Kenning, which was called Lexi Hover up to version 0.7.0.</p>
 
 <p>Kenning is a browser extension that shows a dictionary card when you hold Alt and point at an English word, underlines words you may not know, and keeps a word list on your device. It has no account, no analytics and no server of its own.</p>
 
 <h2>The short version</h2>
 <ul>
   <li><strong>Nothing about you is collected.</strong> No account, no e-mail, no identifier, no analytics, no crash reporting, no telemetry.</li>
-  <li><strong>A single word leaves your browser when you look one up.</strong> It goes to a public dictionary service and a public translation service, and to nothing else.</li>
+  <li><strong>A single word leaves your browser when you look one up.</strong> It goes to a public dictionary service and a public translation service, and to nothing else. Pressing the speaker asks for that word's pronunciation file too — in versions after 0.8.1, from Kenning's own files on GitHub Pages first.</li>
   <li><strong>Everything you save stays on your device</strong> — your word list, your saved sentences, your reading list, your study history and your settings.</li>
   <li><strong>Two optional features send more, and each one is off until you set it up yourself</strong> with something only you can provide: a server you deployed, or an API credential of your own.</li>
 </ul>
@@ -44,7 +44,7 @@
   <tr><th>What</th><th>When</th><th>Where it goes</th></tr>
   <tr><td>One English word</td><td>You hold Alt and point at it</td><td><code>api.dictionaryapi.dev</code> (definitions, pronunciation) and <code>api.mymemory.translated.net</code> (its translation), or DeepL instead if you entered your own DeepL key — in versions after 0.7.0 not the translation service if you chose English only, nor MyMemory once your browser’s own translator for your language is on this computer (a DeepL key you entered is still asked first)</td></tr>
   <tr><td>A phrase or sentence you selected</td><td>Only when you select it <strong>and press the translate button</strong> on its card</td><td><code>api.mymemory.translated.net</code>, or DeepL if you entered your own DeepL key — in versions after 0.7.0 not MyMemory once your browser’s own translator for your language is on this computer (a DeepL key you entered is still asked first)</td></tr>
-  <tr><td>A pronunciation audio file</td><td>You press the speaker button</td><td>The address the dictionary service returned</td></tr>
+  <tr><td>A pronunciation audio file</td><td>You press the speaker button</td><td>In versions after 0.8.1, <code>nnncode.github.io</code> first — Kenning's own recording of that word, on GitHub Pages, asked for only when the word is one the built-in dictionary lists. If there is none, or it does not play, the address the dictionary service returned</td></tr>
   <tr><td>The surrounding sentence, as context for a lookup</td><td>Only if you turn <strong>Send sentence for context</strong> on (off by default)</td><td>DeepL, as a context parameter, if you use DeepL</td></tr>
 </table>
 <p>Every request is made without cookies and without a referrer, so the services above receive the word and nothing about which page you were reading.</p>
@@ -96,7 +96,7 @@
 </table>
 
 <h2>Third parties</h2>
-<p>The services named above receive the words you look up under their own privacy terms: <a href="https://dictionaryapi.dev/">dictionaryapi.dev</a>, <a href="https://mymemory.translated.net/doc/">MyMemory</a>, and, only if you set them up, <a href="https://www.deepl.com/privacy">DeepL</a> and <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare</a>. The page a removal opens is served by <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub Pages</a> and its form is hosted by <a href="https://tally.so/help/privacy-policy">Tally</a>. Kenning does not sell, share or otherwise use any data for purposes other than the feature you triggered.</p>
+<p>The services named above receive the words you look up under their own privacy terms: <a href="https://dictionaryapi.dev/">dictionaryapi.dev</a>, <a href="https://mymemory.translated.net/doc/">MyMemory</a>, and, only if you set them up, <a href="https://www.deepl.com/privacy">DeepL</a> and <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare</a>. Kenning's pronunciation files and the page a removal opens are served by <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub Pages</a> and its form is hosted by <a href="https://tally.so/help/privacy-policy">Tally</a>. Kenning does not sell, share or otherwise use any data for purposes other than the feature you triggered.</p>
 
 <h2>Children</h2>
 <p>The extension does not collect personal data from anyone, including children.</p>
