@@ -25,7 +25,7 @@ GitHub Pages receives each request, so GitHub sees the word and your IP address,
 web request. See [Kenning's privacy policy](https://nnncode.github.io/lexi-hover/privacy.html)
 and [GitHub's privacy statement](https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement).
 
-Questions and problems: <https://github.com/NNNCODE/lexi-hover/issues>.
+Questions and problems: <https://github.com/NNNCODE/NNNCODE.github.io/issues>.
 
 ## Licence
 

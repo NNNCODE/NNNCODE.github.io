@@ -9,3 +9,5 @@ The public pages of Kenning, a hover dictionary for people learning English.
 
 Until 2026-11-10 these were two repositories, `NNNCODE/lexi-hover` and `NNNCODE/kenning-voices`;
 both histories are part of this one. The root page opens the homepage.
+
+Questions and problems: <https://github.com/NNNCODE/NNNCODE.github.io/issues>.
