@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kenning — Privacy Policy</title>
+<meta name="description" content="What Kenning sends, what it keeps on your device, and why each permission exists.">
+<style>
+  :root { color-scheme: light dark; --ink: #1c1c1e; --paper: #fff; --rule: #d9d9de; --muted: #5c5c66; --link: #3b4bd6; }
+  @media (prefers-color-scheme: dark) { :root { --ink: #e6e6ea; --paper: #17171a; --rule: #35353b; --muted: #a0a0aa; --link: #9aa4ff; } }
+  html { background: var(--paper); }
+  body { margin: 0 auto; padding: 32px 16px 64px; max-width: 760px; color: var(--ink); background: var(--paper);
+         font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif; }
+  h1 { font-size: 28px; line-height: 1.25; margin: 0 0 4px; }
+  h2 { font-size: 20px; margin: 36px 0 8px; }
+  p.meta { color: var(--muted); margin: 0 0 24px; }
+  a { color: var(--link); }
+  code { font: 0.92em ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+  table { border-collapse: collapse; width: 100%; margin: 12px 0 20px; font-size: 15px; }
+  th, td { text-align: left; vertical-align: top; padding: 8px 10px; border-top: 1px solid var(--rule); }
+  th { border-top: 0; color: var(--muted); font-weight: 600; }
+  li { margin: 4px 0; }
+  nav { margin: 0 0 24px; font-size: 15px; }
+</style>
+</head>
+<body>
+<nav><a href="./">Kenning</a> · Privacy policy</nav>
+
+<h1>Kenning — Privacy Policy</h1>
+<p class="meta">Effective 2026-09-27, revised 2026-11-06. Applies to version 0.7.0 and later of Kenning, which was called Lexi Hover up to version 0.7.0.</p>
+
+<p>Kenning is a browser extension that shows a dictionary card when you hold Alt and point at an English word, underlines words you may not know, and keeps a word list on your device. It has no account, no analytics and no server of its own.</p>
+
+<h2>The short version</h2>
+<ul>
+  <li><strong>Nothing about you is collected.</strong> No account, no e-mail, no identifier, no analytics, no crash reporting, no telemetry.</li>
+  <li><strong>A single word leaves your browser when you look one up.</strong> It goes to a public dictionary service and a public translation service, and to nothing else. Pressing the speaker asks for that word's pronunciation file too — in versions after 0.8.1, from Kenning's own files on GitHub Pages first.</li>
+  <li><strong>Everything you save stays on your device</strong> — your word list, your saved sentences, your reading list, your study history and your settings.</li>
+  <li><strong>Two optional features send more, and each one is off until you set it up yourself</strong> with something only you can provide: a server you deployed, or an API credential of your own.</li>
+</ul>
+
+<h2>What leaves your browser, and when</h2>
+<table>
+  <tr><th>What</th><th>When</th><th>Where it goes</th></tr>
+  <tr><td>One English word</td><td>You hold Alt and point at it</td><td><code>api.dictionaryapi.dev</code> (definitions, pronunciation) and <code>api.mymemory.translated.net</code> (its translation), or DeepL instead if you entered your own DeepL key — in versions after 0.7.0 not the translation service if you chose English only, nor MyMemory once your browser’s own translator for your language is on this computer (a DeepL key you entered is still asked first)</td></tr>
+  <tr><td>A phrase or sentence you selected</td><td>Only when you select it <strong>and press the translate button</strong> on its card</td><td><code>api.mymemory.translated.net</code>, or DeepL if you entered your own DeepL key — in versions after 0.7.0 not MyMemory once your browser’s own translator for your language is on this computer (a DeepL key you entered is still asked first)</td></tr>
+  <tr><td>A pronunciation audio file</td><td>You press the speaker button</td><td>In versions after 0.8.1, <code>nnncode.github.io</code> first — Kenning's own recording of that word, on GitHub Pages, asked for only when the word is one the built-in dictionary lists. If there is none, or it does not play, the address the dictionary service returned</td></tr>
+  <tr><td>The surrounding sentence, as context for a lookup</td><td>Only if you turn <strong>Send sentence for context</strong> on (off by default)</td><td>DeepL, as a context parameter, if you use DeepL</td></tr>
+</table>
+<p>Every request is made without cookies and without a referrer, so the services above receive the word and nothing about which page you were reading.</p>
+<p>Results are cached on your device for 30 days, so a word the dictionary service has answered before makes no request at all. A word it failed to answer may be asked for again later.</p>
+
+<h2>What never leaves your browser</h2>
+<ul>
+  <li>The pages you visit, their addresses, their titles or their content.</li>
+  <li>Your browsing history.</li>
+  <li>Your word list, saved sentences, reading list and study history — unless you turn on sync, described below.</li>
+  <li>Any word the extension underlines. Underlining is graded against a dictionary bundled inside the extension; it reads every word on the page and transmits none of them.</li>
+  <li>Paragraph translation, which uses your browser's own on-device translator and has no online fallback.</li>
+  <li>The sentence you translate with the 文A button on a word card while no AI credentials are saved (versions after 0.7.0): that button then uses the same on-device translator.</li>
+  <li>A word or a selected phrase, once your browser’s own translator for your language is on this computer (versions after 0.7.0): it is translated there. The model arrives only when you press something that downloads it — the paragraph switch, the 文A button, a <em>Download the … translator</em> button (on the welcome page, under <strong>Look up a word</strong>, or on the word list page), or changing <strong>Translate to</strong> while paragraph translation is on. The download comes from your browser’s maker.</li>
+  <li>The meanings on your word list page and beside <strong>Check this page</strong> in a language other than Chinese (versions after 0.7.0): your browser’s own translator makes them on this computer.</li>
+  <li>A word you type into <strong>Look up a word</strong> in the toolbar popup (versions after 0.7.0). It is answered from the dictionary bundled inside the extension, and for a language other than Chinese by your browser’s own translator on this computer, and nothing else — so a word that dictionary lacks is reported as not found rather than sent anywhere.</li>
+</ul>
+
+<h2>The two optional features that send more</h2>
+<p>Both are off when you install the extension, and neither can be turned on by accident: each needs you to paste something into the extension's settings.</p>
+<p><strong>Sync.</strong> If you deploy a sync server of your own and paste its address into the word list page, your word list is sent to that server <strong>encrypted in your browser</strong> with a key derived from a code that never leaves your device. The server stores an opaque id, a version number and bytes it cannot read. There is no account; whoever holds your code can read the list, and nobody can recover it for you. Sync runs about a minute after you file a word and every half hour otherwise, or only when you press <strong>Sync now</strong> if you turn the automatic option off.</p>
+<p><strong>Sentence translation by an AI model (the 文A button on a word card).</strong> If you paste a Cloudflare account id and an API token of your own into the popup, pressing that button sends <strong>the word and the one sentence it appeared in</strong> — nothing else — to <code>api.cloudflare.com</code> (Workers AI), under Cloudflare's terms. The sentence is capped at 400 characters. The token is sent in a request header, stored only on your device, and never given to any web page. The answer is kept in memory while the browser is open and discarded when it closes. Without these credentials the same button translates the sentence on your device and sends nothing (versions after 0.7.0; in 0.7.0 the button is not shown without them).</p>
+
+<h2>What is stored on your device</h2>
+<p>All of it is in the browser's extension storage, which is removed when you uninstall:</p>
+<ul>
+  <li>Settings, including any API key or sync code you entered.</li>
+  <li>Your word list, with up to two sentences per word and the page each came from. Page addresses are stored as origin and path only — the query string and fragment, which is where session tokens and tracking ids live, are dropped before anything is written.</li>
+  <li>Sentences you kept, with the page's origin, path and title.</li>
+  <li>Pages and documents you saved to the reading list (text only, no images or scripts).</li>
+  <li>Your study log: how many words were filed and graded on each day, and nothing else.</li>
+  <li>Lookup results, for 30 days.</li>
+</ul>
+<p>The extension deliberately does not use the browser's own account-backed sync storage.</p>
+
+<h2>When you remove the extension</h2>
+<p>In versions after 0.8.0 installed from a store, removing Kenning makes the browser open one page, <a href="uninstall.html">nnncode.github.io/lexi-hover/uninstall.html</a>, which asks why you removed it. The extension sends nothing for this while it is installed: it only gives the browser that address, which carries nothing about you, and the browser visits it after the extension is gone. That visit is an ordinary page load: GitHub, which serves the page, and Tally, whose form is on it, see what any website sees — your IP address, your browser and the time — and Tally counts how many times the form is opened. Tally keeps anything you type into the form. Answering is optional, and the form asks for no e-mail. The author reads the answers to decide what to fix.</p>
+
+<h2>Permissions</h2>
+<table>
+  <tr><th>Permission</th><th>Why</th></tr>
+  <tr><td><code>storage</code></td><td>Settings, the word list and the local cache.</td></tr>
+  <tr><td><code>activeTab</code></td><td>Read the current tab's address when you click the toolbar icon, so the popup can offer to enable that site; and read the page's text once if you press <strong>Save this page</strong> or <strong>Check this page</strong>. The access arrives with your click and ends when the popup closes.</td></tr>
+  <tr><td><code>scripting</code></td><td>Run the extension on the sites you enabled, and run the article extractor on the tab where you pressed <strong>Save this page</strong>.</td></tr>
+  <tr><td><code>offscreen</code></td><td>Play pronunciation audio outside the web page.</td></tr>
+  <tr><td><code>alarms</code></td><td>The half-hourly sync round — only if you have set up sync; otherwise no alarm exists.</td></tr>
+  <tr><td>Access to <code>api.dictionaryapi.dev</code> and <code>api.mymemory.translated.net</code></td><td>The dictionary and translation services above.</td></tr>
+  <tr><td>Access to other websites (optional)</td><td>Granted only when you press <strong>Enable</strong> on a site, switch <strong>All sites</strong> on, or press <strong>Use on all sites</strong> on the welcome page that opens after you install (versions after 0.7.0). The extension needs to read the page you are looking at in order to underline words and open the card. You can revoke it from the popup or from the browser's extensions page at any time.</td></tr>
+</table>
+
+<h2>Third parties</h2>
+<p>The services named above receive the words you look up under their own privacy terms: <a href="https://dictionaryapi.dev/">dictionaryapi.dev</a>, <a href="https://mymemory.translated.net/doc/">MyMemory</a>, and, only if you set them up, <a href="https://www.deepl.com/privacy">DeepL</a> and <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare</a>. Kenning's pronunciation files and the page a removal opens are served by <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub Pages</a> and its form is hosted by <a href="https://tally.so/help/privacy-policy">Tally</a>. Kenning does not sell, share or otherwise use any data for purposes other than the feature you triggered.</p>
+
+<h2>Children</h2>
+<p>The extension does not collect personal data from anyone, including children.</p>
+
+<h2>Changes</h2>
+<p>If a future version sends anything new anywhere, this policy and the extension's own README change in the same release, and the version number at the top of this page is updated.</p>
+
+<h2>Contact</h2>
+<p>Open an issue at <a href="https://github.com/NNNCODE/lexi-hover/issues">github.com/NNNCODE/lexi-hover/issues</a>.</p>
+</body>
+</html>

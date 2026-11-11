@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kenning — Hover Dictionary for English Learners</title>
+<meta name="description" content="Hold Alt and point at any English word for its pronunciation, meaning and a translation — a hover dictionary for English learners.">
+<style>
+  :root { color-scheme: light dark; --ink: #1c1c1e; --paper: #fff; --rule: #d9d9de; --muted: #5c5c66; --link: #3b4bd6; }
+  @media (prefers-color-scheme: dark) { :root { --ink: #e6e6ea; --paper: #17171a; --rule: #35353b; --muted: #a0a0aa; --link: #9aa4ff; } }
+  html { background: var(--paper); }
+  body { margin: 0 auto; padding: 48px 16px 64px; max-width: 680px; color: var(--ink); background: var(--paper);
+         font: 17px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif; }
+  h1 { font-size: 32px; line-height: 1.2; margin: 0 0 8px; }
+  h2 { font-size: 20px; margin: 36px 0 8px; }
+  p.lead { font-size: 19px; color: var(--muted); margin: 0 0 28px; }
+  a { color: var(--link); }
+  ul { padding-left: 22px; }
+  li { margin: 6px 0; }
+  kbd { font: 0.9em ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; border: 1px solid var(--rule); border-radius: 4px; padding: 0 5px; }
+  footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--rule); color: var(--muted); font-size: 15px; }
+</style>
+</head>
+<body>
+<h1>Kenning</h1>
+<p class="lead">A hover dictionary for people learning English, that opens where you are reading.</p>
+
+<p>Hold <kbd>Alt</kbd> and point at any English word on a web page. A small card opens on the spot with the pronunciation, the part of speech, a short English definition, an example and a translation into the language you choose. Move on and it closes.</p>
+
+<h2>What it does</h2>
+<ul>
+  <li>Underlines the words you are likely not to know, graded by frequency or by exam syllabus, from a dictionary bundled inside the extension.</li>
+  <li>Draws a short meaning above each underlined word, if you want it (in Chinese, for now).</li>
+  <li>Tells you before you read a page how many of its words are above your level.</li>
+  <li>Translates a selected phrase with one press, and keeps a sentence for later without translating it.</li>
+  <li>Keeps a word list with the sentence each word was met in, and reviews it on a spaced schedule.</li>
+  <li>Saves a page, a PDF or a YouTube transcript to read later, with everything above.</li>
+  <li>Shows a translation under each paragraph, in your language, using the browser's own on-device translator.</li>
+</ul>
+
+<h2>What leaves your browser</h2>
+<ul>
+  <li>The one word you looked up, sent to a public dictionary and a public translation service without cookies.</li>
+  <li>Nothing else — not the page, not its address, not your word list. No account, no analytics.</li>
+  <li>Two optional features send more, and each is off until you set it up with credentials of your own.</li>
+</ul>
+<p><a href="privacy.html">Read the privacy policy</a> — it is short.</p>
+
+<h2>Help and feedback</h2>
+<p>Something wrong, or a site where it does not work? <a href="https://github.com/NNNCODE/lexi-hover/issues">Open an issue</a>.</p>
+
+<footer>Dictionary data from <a href="https://github.com/skywind3000/ECDICT">ECDICT</a> (Lin Wei, CC BY-SA 4.0). Definitions from dictionaryapi.dev. Translation by MyMemory, or your own DeepL key.</footer>
+</body>
+</html>
